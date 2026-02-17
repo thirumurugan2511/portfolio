@@ -1,380 +1,375 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thirumurugan</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thirumurugan</title>
-
-  <!--
+    <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images//my-avatar.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/images//my-avatar.png"
+      type="image/x-icon"
+    />
 
-  <!--
+    <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
- 
-  <!--
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!--
     - google font link
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Mail sent link -->
-  <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "07h1A8DTeGQ9Mntps",
-      });
-   })();
+    <!-- Mail sent link -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "07h1A8DTeGQ9Mntps",
+        });
+      })();
 
-   function sendMail(){
-  
-      let parms = {
-      
-      from_name: document.getElementById("name").value,
-      
-      email_id: document.getElementById("email").value,
-      
-      message: document.getElementById("message").value,
-      
+      function sendMail() {
+        let parms = {
+          from_name: document.getElementById("name").value,
+
+          email_id: document.getElementById("email").value,
+
+          message: document.getElementById("message").value,
+        };
+
+        emailjs
+          .send("service_6e3sdgh", "template_vszfj4e", parms)
+          .then(function (res) {
+            alert("Submitted!" + res.status);
+          });
       }
-      
-      emailjs.send("service_6e3sdgh","template_vszfj4e", parms).then(function (res) {
-        alert("Submitted!" + res.status);
-      })
-    }
-  </script>
+    </script>
+  </head>
 
-</head>
-
-<body>
-
-  <!--
+  <body>
+    <!--
     - #MAIN
   -->
 
-  <main>
-
-    <!--
+    <main>
+      <!--
       - #SIDEBAR
     -->
 
-    <aside class="sidebar" data-sidebar>
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./assets/images/my-avatar.png"
+              alt="Richard hanrick"
+              width="80"
+            />
+          </figure>
 
-      <div class="sidebar-info">
+          <div class="info-content">
+            <h1 class="name" title="Richard hanrick">Thirumurugan</h1>
 
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
-        </figure>
+            <p class="title">React Js Developer</p>
+          </div>
 
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Thirumurugan</h1>
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
 
-          <p class="title">React Js Developer</p>
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
 
-      </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
 
-      <div class="sidebar-info_more">
+                <a
+                  href="mailto:thirumuruganr2511@gmail.com"
+                  class="contact-link"
+                  >thirumuruganr2511@gmail.com</a
+                >
+              </div>
+            </li>
 
-        <div class="separator"></div>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
 
-        <ul class="contacts-list">
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
 
-          <li class="contact-item">
+                <a href="tel:8870082135" class="contact-link">+91 8870082135</a>
+              </div>
+            </li>
 
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
 
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
 
-              <a href="mailto:thirumuruganr2511@gmail.com" class="contact-link">thirumuruganr2511@gmail.com</a>
-            </div>
+                <time datetime="1982-06-23">Nov 25, 2001</time>
+              </div>
+            </li>
 
-          </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
 
-          <li class="contact-item">
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
 
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
+                <address>Chennai, India</address>
+              </div>
+            </li>
+          </ul>
 
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
+          <div class="separator"></div>
 
-              <a href="tel:8870082135" class="contact-link">+91 8870082135</a>
-            </div>
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                href="https://www.linkedin.com/in/thirumuruganr01/"
+                class="social-link"
+              >
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
 
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">Nov 25, 2001</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Chennai, India</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/thirumuruganr01/" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <!-- <li class="social-item">
+            <!-- <li class="social-item">
             <a href="#" class="social-link">
               <ion-icon name="logo-email"></ion-icon>
             </a>
           </li> -->
 
-          <li class="social-item">
-            <a href="https://github.com/thirumurugan2511" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
+            <li class="social-item">
+              <a href="https://github.com/thirumurugan2511" class="social-link">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
 
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
+      <!--
       - #main-content
     -->
 
-    <div class="main-content">
-
-      <!--
+      <div class="main-content">
+        <!--
         - #NAVBAR
       -->
 
-      <nav class="navbar">
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>About</button>
+            </li>
 
-        <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
 
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Portfolio</button>
+            </li>
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <!-- <li class="navbar-item">
+            <!-- <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
           </li> -->
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Contact</button>
+            </li>
+          </ul>
+        </nav>
 
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
+        <!--
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
+          <section class="about-text">
+            <p>
+              Hello! I’m Thirumurugan, a BCA graduate from the Class of 2022,
+              with over 2.4+ years of hands-on experience as a Frontend
+              Developer. I specialize in building scalable and high-performance
+              web applications using Next.js, React.js, TypeScript, JavaScript,
+              HTML, CSS, Tailwind CSS, and Bootstrap. I also have strong
+              experience working with TanStack Query, Redux, REST APIs, Git,
+              GitHub, and GitLab.
+            </p>
 
-        <section class="about-text">
-          <p>
-            Hello! I’m Thirumurugan, a BCA graduate from the Class of 2022. With over 1.2 years of hands-on experience as a frontend developer.
-            I've developed a strong expertise in ReactJs, Node Js, Redux, MongoDB, Ajax, HTML, CSS, JavaScript, Bootstrap, Git, GitHub, and responsive HTML design. 
-            
-          </p>
+            <p>
+              My passion lies in crafting modern, user-friendly, and visually
+              engaging web experiences that deliver real business value. I
+              continuously explore new technologies and best practices to
+              improve performance, maintainability, and user experience. Let’s
+              connect and collaborate on innovative projects that push the
+              boundaries of web development!
+            </p>
+          </section>
 
-          <p>
-            My passion lies in creating modern, high-quality web experiences that are both functional and visually engaging. 
-            I’m committed to staying updated with the latest technologies and best practices to deliver innovative solutions. 
-            Let’s connect and explore exciting opportunities to collaborate on projects that push the boundaries of web development!
-          </p>
-        </section>
-
-
-        <!--
+          <!--
           - service
         -->
 
-        <section class="service">
+          <section class="service">
+            <h3 class="h3 service-title">What i'm doing</h3>
 
-          <h3 class="h3 service-title">What i'm doing</h3>
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Web development icon"
+                    width="40"
+                  />
+                </div>
 
-          <ul class="service-list">
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web Development</h4>
 
-            <li class="service-item">
+                  <p class="service-item-text">
+                    High-quality development of sites at the professional level.
+                  </p>
+                </div>
+              </li>
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Web development icon"
+                    width="40"
+                  />
+                </div>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web Development</h4>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Software Development</h4>
 
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
+                  <p class="service-item-text">
+                    High-quality development of softwares at the professional
+                    level.
+                  </p>
+                </div>
+              </li>
 
-            </li>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Web development icon"
+                    width="40"
+                  />
+                </div>
 
-            <li class="service-item">
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Content Creator</h4>
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
+                  <p class="service-item-text">
+                    Maintaining the meme page. Creating content and memes.
+                  </p>
+                </div>
+              </li>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Software Development</h4>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-app.svg"
+                    alt="mobile app icon"
+                    width="40"
+                  />
+                </div>
 
-                <p class="service-item-text">
-                  High-quality development of softwares at the professional level.
-                </p>
-              </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">
+                    Freelancing Video Editing
+                  </h4>
 
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Content Creator</h4>
-
-                <p class="service-item-text">
-                  Maintaining the meme page. Creating content and memes.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Freelancing Video Editing</h4>
-
-                <p class="service-item-text">
-                  Professional video editing that transforms raw footage into stunning, high-quality visual stories.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
+                  <p class="service-item-text">
+                    Professional video editing that transforms raw footage into
+                    stunning, high-quality visual stories.
+                  </p>
+                </div>
+              </li>
+            </ul>
           </section>
 
-        </div>
+          <div class="modal-container" data-modal-container>
+            <div class="overlay" data-overlay></div>
 
+            <section class="testimonials-modal">
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
 
-        <!--
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img
+                    src="./assets/images/avatar-1.png"
+                    alt="Daniel lewis"
+                    width="80"
+                    data-modal-img
+                  />
+                </figure>
+
+                <img src="./assets/images/icon-quote.svg" alt="quote icon" />
+              </div>
+
+              <div class="modal-content">
+                <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+                <time datetime="2021-06-14">14 June, 2021</time>
+
+                <div data-modal-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were
+                    very pleased with the work done. She has a lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum
+                    dolor sit amet, ullamcous cididt consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels
+                    dolore magnarels alia.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!--
           - clients
         -->
-<!-- 
+          <!-- 
         <section class="clients">
 
           <h3 class="h3 clients-title">Clients</h3>
@@ -420,202 +415,195 @@
           </ul>
 
         </section> -->
+        </article>
 
-      </article>
-
-
-
-
-
-      <!--
+        <!--
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
 
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <h3 class="h3">Education</h3>
             </div>
 
-            <h3 class="h3">Education</h3>
-          </div>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Bharathidasan University</h4>
 
-          <ol class="timeline-list">
+                <span>2024 — Present</span>
 
-            <li class="timeline-item">
+                <p class="timeline-text">MBA</p>
+              </li>
 
-              <h4 class="h4 timeline-item-title">Bharathidasan University</h4>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Kalasalingam University</h4>
 
-              <span>2024 — Present</span>
+                <span>2019 — 2022</span>
 
-              <p class="timeline-text">
-                MBA
-              </p>
+                <p class="timeline-text">
+                  Bachelor's of Computer Applications - BCA
+                </p>
+              </li>
 
-            </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Gov.Hr.Sec.School</h4>
 
-            <li class="timeline-item">
+                <span>2017 — 2019</span>
 
-              <h4 class="h4 timeline-item-title">Kalasalingam University</h4>
+                <p class="timeline-text">HSC</p>
+              </li>
+            </ol>
+          </section>
 
-              <span>2019 — 2022</span>
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
 
-              <p class="timeline-text">
-                Bachelor's of Computer Applications - BCA
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Gov.Hr.Sec.School</h4>
-
-              <span>2017 — 2019</span>
-
-              <p class="timeline-text">
-                HSC
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <h3 class="h3">Experience</h3>
             </div>
 
-            <h3 class="h3">Experience</h3>
-          </div>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  React JS Developer - OneData Software Solutions Private
+                  Limited. ( Coimbatore )
+                </h4>
 
-          <ol class="timeline-list">
+                <span>Nov 2024 - Present</span>
 
-            <li class="timeline-item">
+                <p class="timeline-text">
+                  Worked extensively in Next.js, leveraging file-based routing,
+                  server-side components, and reusable core components to build
+                  maintainable and high-performance applications. Developed
+                  responsive and scalable web applications using React.js,
+                  TypeScript, and Next.js, with efficient state management via
+                  Redux and data fetching through React Query. Implemented
+                  modern, user-friendly UIs with Tailwind CSS and Bootstrap,
+                  ensuring responsive design and seamless user experiences
+                  across devices. Integrated and consumed RESTful APIs for
+                  dynamic data handling, authentication, and CRUD operations
+                  across both web and mobile platforms. Working with designers
+                  and backend developers to deliver high-quality,
+                  production-ready features and version control (Git).
+                </p>
+              </li>
 
-              <h4 class="h4 timeline-item-title">React JS Developer - OneData Software Solutions Private Limited. ( Coimbatore )</h4>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Front End Developer - Vacation Feast ( Chennai )
+                </h4>
 
-              <span>Nov 2024 - Present</span>
+                <span>Nov 2023 - June 2024</span>
 
-              <p class="timeline-text">
-                Worked extensively in Next.js, leveraging file-based routing, server-side components, and 
-                reusable core components to build maintainable and high-performance applications. 
-                Developed responsive and scalable web applications using React.js, TypeScript, and  Next.js, with 
-                efficient state management via Redux and data fetching through React Query. Implemented 
-                modern, user-friendly UIs with Tailwind CSS and Bootstrap, ensuring responsive design and 
-                seamless user experiences across devices. 
-                Integrated and consumed RESTful APIs for dynamic data handling, authentication, and CRUD 
-                operations across both web and mobile platforms. Working with designers and backend 
-                developers to deliver high-quality, production-ready features and version control (Git).
-              </p>
-            </li>
+                <p class="timeline-text">
+                  As a Frontend Developer at Vacation Feast for over 7 months, I
+                  played a pivotal role in developing and maintaining a
+                  user-friendly tour packages booking website. My
+                  responsibilities included leveraging HTML, CSS, and JavaScript
+                  to create interactive and responsive web pages. I employed
+                  AJAX and jQuery to enhance dynamic content loading and user
+                  engagement. By utilizing media queries and Bootstrap, I
+                  ensured the website was fully responsive across various
+                  devices. I also integrated JSON APIs for efficient data
+                  processing and form integration. Throughout the development
+                  process, I used Git for version control and collaborated with
+                  my team via GitHub, while Visual Studio Code served as my
+                  primary tool for coding and debugging.
+                </p>
+              </li>
 
-            <li class="timeline-item">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  React Js Developer - Intern ( Aathesh Soft Infotech)
+                </h4>
 
-              <h4 class="h4 timeline-item-title">Front End Developer - Vacation Feast ( Chennai )</h4>
+                <span>May 2023 - Oct 2023</span>
 
-              <span>Nov 2023 - June 2024</span>
+                <p class="timeline-text">
+                  I completed a comprehensive project named Tulir matrimony, a
+                  matrimonial website designed to facilitate matchmaking
+                  services. I utilized React and Bootstrap for the front-end,
+                  ensuring a seamless and visually appealing user experience.
+                  The back-end was powered by Node.js, enabling robust and
+                  efficient handling of user authentication, profile management,
+                  and matchmaking functionalities. I employed HTML, CSS, and
+                  JavaScript to create a dynamic and interactive interface.
+                  Throughout the project, I used GitHub for version control,
+                  ensuring smooth collaboration and code integration.
+                </p>
+              </li>
+            </ol>
+          </section>
 
-              <p class="timeline-text">
-                As a Frontend Developer at Vacation Feast for over 7 months, I played a pivotal role in developing and maintaining a user-friendly tour packages booking website. My responsibilities included leveraging HTML, CSS, and JavaScript to create interactive and responsive web pages. I employed AJAX and jQuery to enhance dynamic content loading and user engagement. By utilizing media queries and Bootstrap, I ensured the website was fully responsive across various devices. I also integrated JSON APIs for efficient data processing and form integration. Throughout the development process, I used Git for version control and collaborated with my team via GitHub, while Visual Studio Code served as my primary tool for coding and debugging.
-              </p>
+          <section class="skill">
+            <h3 class="h3 skills-title">My skills</h3>
 
-            </li>
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">
+                    Front End Development ( Typescript, JavaScript, CSS, Html5 )
+                  </h5>
+                  <data value="85">85%</data>
+                </div>
 
-            <li class="timeline-item">
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 85%"></div>
+                </div>
+              </li>
 
-              <h4 class="h4 timeline-item-title">React Js Developer - Intern ( Aathesh Soft Infotech)</h4>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">
+                    Frameworks & Libraries ( NextJS, React.JS, Redux, React
+                    query, Bootstrap, Tailwind )
+                  </h5>
+                  <data value="80">80%</data>
+                </div>
 
-              <span>May 2023 - Oct 2023</span>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </li>
 
-              <p class="timeline-text">
-                I completed a comprehensive project named Tulir matrimony, a matrimonial website designed to facilitate matchmaking services. I utilized React and Bootstrap for the front-end, ensuring a seamless and visually appealing user experience. The back-end was powered by Node.js, enabling robust and efficient handling of user authentication, profile management, and matchmaking functionalities. I employed HTML, CSS, and JavaScript to create a dynamic and interactive interface. Throughout the project, I used GitHub for version control, ensuring smooth collaboration and code integration.
-              </p>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">
+                    Back End development ( NextJS, NodeJS, MongoDB )
+                  </h5>
+                  <data value="70">70%</data>
+                </div>
 
-            </li>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%"></div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </article>
 
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Front End Development ( Typescript, JavaScript, CSS, Html5 )</h5>
-                <data value="85">85%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 85%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Frameworks & Libraries ( React JS, Bootstrap, NextJS, Redux, React query, Bootstrap, Tailwind )</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Back End development ( NextJS, NodeJS, MongoDB )</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
+        <!--
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio">
+        <article class="portfolio" data-page="portfolio">
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <!-- <ul class="filter-list">
+          <section class="projects">
+            <!-- <ul class="filter-list">
 
             <li class="filter-item">
               <button class="active" data-filter-btn>All</button>
@@ -635,416 +623,468 @@
 
           </ul> -->
 
-          <div class="filter-select-box">
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>
+                  Select category
+                </div>
 
-            <button class="filter-select" data-select>
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
 
-              <div class="select-value" data-selecct-value>Select category</div>
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>All</button>
+                </li>
 
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
+                <li class="select-item">
+                  <button data-select-item>Web design</button>
+                </li>
 
-            </button>
+                <li class="select-item">
+                  <button data-select-item>Applications</button>
+                </li>
 
-            <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>Web development</button>
+                </li>
+              </ul>
+            </div>
 
-              <li class="select-item">
-                <button data-select-item>All</button>
+            <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://vacationfeast.com/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project_1.png"
+                      alt="finance"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Vacation Feast</h3>
+
+                  <p class="project-category">
+                    Tour packages - Html, CSS, JavaScript
+                  </p>
+                </a>
               </li>
 
-              <li class="select-item">
-                <button data-select-item>Web design</button>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://www.tulirmatrimony.com/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project_2.png"
+                      alt="orizon"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Tulir Matrimony</h3>
+
+                  <p class="project-category">
+                    Admin panel - React Js, Node JS
+                  </p>
+                </a>
               </li>
 
-              <li class="select-item">
-                <button data-select-item>Applications</button>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web design"
+              >
+                <a href="https://www.tulirmatrimony.com/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project_3.png"
+                      alt="fundo"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Tulir Matrimony</h3>
+
+                  <p class="project-category">Matrimony - React Js, Node JS</p>
+                </a>
               </li>
 
-              <li class="select-item">
-                <button data-select-item>Web development</button>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="https://trippy-travelling.netlify.app/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project_4.png"
+                      alt="brawlhalla"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Trippy</h3>
+
+                  <p class="project-category">
+                    Tour Static - React Js, Bootstrap
+                  </p>
+                </a>
               </li>
 
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web design"
+              >
+                <a href="https://organicspices.netlify.app/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project_5.png"
+                      alt="dsm."
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Organic Spices</h3>
+
+                  <p class="project-category">Organic Static - Bootstrap</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web design"
+              >
+                <a href="https://socialmedia-app-sharemate.netlify.app/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project_6.png"
+                      alt="metaspark"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Sharemate</h3>
+
+                  <p class="project-category">
+                    Socialmedia App - React Js, Json Api
+                  </p>
+                </a>
+              </li>
             </ul>
+          </section>
+        </article>
 
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://vacationfeast.com/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project_1.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Vacation Feast</h3>
-
-                <p class="project-category">Tour packages - Html, CSS, JavaScript</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://www.tulirmatrimony.com/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project_2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Tulir Matrimony</h3>
-
-                <p class="project-category">Admin panel - React Js, Node JS</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="https://www.tulirmatrimony.com/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project_3.png" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Tulir Matrimony</h3>
-
-                <p class="project-category">Matrimony - React Js, Node JS</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="https://trippy-travelling.netlify.app/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project_4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Trippy</h3>
-
-                <p class="project-category">Tour Static - React Js, Bootstrap</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="https://organicspices.netlify.app/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project_5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Organic Spices</h3>
-
-                <p class="project-category">Organic Static - Bootstrap</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="https://socialmedia-app-sharemate.netlify.app/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project_6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Sharemate</h3>
-
-                <p class="project-category">Socialmedia App - React Js, Json Api</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
+        <!--
         - #BLOG
       -->
 
-      <article class="blog" data-page="blog">
+        <article class="blog" data-page="blog">
+          <header>
+            <h2 class="h2 article-title">Blog</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
+          <section class="blog-posts">
+            <ul class="blog-posts-list">
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-1.jpg"
+                      alt="Design conferences in 2022"
+                      loading="lazy"
+                    />
+                  </figure>
 
-        <section class="blog-posts">
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
 
-          <ul class="blog-posts-list">
+                      <span class="dot"></span>
 
-            <li class="blog-post-item">
-              <a href="#">
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
+                    <h3 class="h3 blog-item-title">
+                      Design conferences in 2022
+                    </h3>
 
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <p class="blog-text">
+                      Veritatis et quasi architecto beatae vitae dicta sunt,
+                      explicabo.
+                    </p>
                   </div>
+                </a>
+              </li>
 
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-2.jpg"
+                      alt="Best fonts every designer"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
 
-                </div>
+                      <span class="dot"></span>
 
-              </a>
-            </li>
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
 
-            <li class="blog-post-item">
-              <a href="#">
+                    <h3 class="h3 blog-item-title">
+                      Best fonts every designer
+                    </h3>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <p class="blog-text">
+                      Sed ut perspiciatis, nam libero tempore, cum soluta nobis
+                      est eligendi.
+                    </p>
                   </div>
+                </a>
+              </li>
 
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-3.jpg"
+                      alt="Design digest #80"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
 
-                </div>
+                      <span class="dot"></span>
 
-              </a>
-            </li>
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
 
-            <li class="blog-post-item">
-              <a href="#">
+                    <h3 class="h3 blog-item-title">Design digest #80</h3>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <p class="blog-text">
+                      Excepteur sint occaecat cupidatat no proident, quis
+                      nostrum exercitationem ullam corporis suscipit.
+                    </p>
                   </div>
+                </a>
+              </li>
 
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-4.jpg"
+                      alt="UI interactions of the week"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
 
-                </div>
+                      <span class="dot"></span>
 
-              </a>
-            </li>
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
 
-            <li class="blog-post-item">
-              <a href="#">
+                    <h3 class="h3 blog-item-title">
+                      UI interactions of the week
+                    </h3>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <p class="blog-text">
+                      Enim ad minim veniam, consectetur adipiscing elit, quis
+                      nostrud exercitation ullamco laboris nisi.
+                    </p>
                   </div>
+                </a>
+              </li>
 
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-5.jpg"
+                      alt="The forgotten art of spacing"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
 
-                </div>
+                      <span class="dot"></span>
 
-              </a>
-            </li>
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
 
-            <li class="blog-post-item">
-              <a href="#">
+                    <h3 class="h3 blog-item-title">
+                      The forgotten art of spacing
+                    </h3>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <p class="blog-text">
+                      Maxime placeat, sed do eiusmod tempor incididunt ut labore
+                      et dolore magna aliqua.
+                    </p>
                   </div>
+                </a>
+              </li>
 
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-6.jpg"
+                      alt="Design digest #79"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
 
-                </div>
+                      <span class="dot"></span>
 
-              </a>
-            </li>
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
 
-            <li class="blog-post-item">
-              <a href="#">
+                    <h3 class="h3 blog-item-title">Design digest #79</h3>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <p class="blog-text">
+                      Optio cumque nihil impedit uo minus quod maxime placeat,
+                      velit esse cillum.
+                    </p>
                   </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
 
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
+        <!--
         - #CONTACT
       -->
 
-      <article class="contact" data-page="contact">
+        <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
+          <section class="mapbox" data-mapbox>
+            <figure>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1823.423677424226!2d80.22956181400923!3d12.896473457918258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525ba099e18741%3A0x8d53a4af519c8b16!2sAditi%20PG%20for%20Mens%20Sholinganallur!5e0!3m2!1sen!2sin!4v1722068825213!5m2!1sen!2sin"
+                width="400"
+                height="300"
+                loading="lazy"
+              ></iframe>
+            </figure>
+          </section>
 
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1823.423677424226!2d80.22956181400923!3d12.896473457918258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525ba099e18741%3A0x8d53a4af519c8b16!2sAditi%20PG%20for%20Mens%20Sholinganallur!5e0!3m2!1sen!2sin!4v1722068825213!5m2!1sen!2sin"
-              width="400" height="300" loading="lazy"></iframe>
-              
-          </figure>
-        </section>
+          <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
 
-        <section class="contact-form">
+            <form action="#" class="form" data-form>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form-input"
+                  placeholder="Full name"
+                  required
+                  data-form-input
+                />
 
-          <h3 class="h3 form-title">Contact Form</h3>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-input"
+                  placeholder="Email address"
+                  required
+                  data-form-input
+                />
+              </div>
 
-          <form action="#" class="form" data-form>
+              <textarea
+                name="message"
+                id="message"
+                class="form-input"
+                placeholder="Your Message"
+                required
+                data-form-input
+              ></textarea>
 
-            <div class="input-wrapper">
-              <input type="text" name="name" id="name" class="form-input" placeholder="Full name" required data-form-input>
+              <button class="form-btn" onclick="sendMail()" data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main>
 
-              <input type="email" name="email" id="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" id="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" onclick="sendMail()" data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
-    </div>
-
-  </main>
-
-
-
-  
-
-
-  <!--
+    <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 
-  <!--
+    <!--
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
